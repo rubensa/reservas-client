@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/rubensa/reservas-client.svg)](https://travis-ci.org/rubensa/reservas-client)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Plataforma web para la gestión de reservas de aulas y espacios comunes en la Escuela Politécnica de Ingeniería de Gijón
 
