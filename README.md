@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/rubensa/reservas-client.svg)](https://travis-ci.org/rubensa/reservas-client)
 [![codecov](https://codecov.io/gh/rubensa/reservas-client/branch/master/graph/badge.svg)](https://codecov.io/gh/rubensa/reservas-client)
+[![Website](https://img.shields.io/website?down_color=red&down_message=down&label=GitHub%20Pages&up_color=green&up_message=up&url=https%3A%2F%2Frubensa.eu.org%2Freservas-client%2Findex.html)](https://rubensa.github.io/reservas-client/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Plataforma web para la gestión de reservas de aulas y espacios comunes en la Escuela Politécnica de Ingeniería de Gijón

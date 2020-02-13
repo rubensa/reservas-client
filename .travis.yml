@@ -24,7 +24,18 @@ script:
   - npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
   #enable code coverage reports
   - ng test --no-watch --code-coverage --no-progress --browsers=ChromeHeadlessCI
+  #build for GitHub Pages
+  - ng build --base-href "https://rubensa.eu.org/reservas-client/"
 
 after_success:
   # Set CODECOV_TOKEN in travis-ci.org settings page of your repository, as a secure variable
   - bash <(curl -s https://codecov.io/bash)
+
+#deploy on GitHub Pages
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_OAUTH_TOKEN # Set in travis-ci.org settings page of your repository, as a secure variable
+  local_dir: dist/reservas
+  on:
+    branch: master
