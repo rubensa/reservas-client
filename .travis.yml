@@ -8,6 +8,10 @@ node_js:
 #we need google-chrome for testing
 addons:
   chrome: stable
+  sonarcloud:
+    organization: "rubensa"
+    token:
+      secure: $SONAR_TOKEN
 
 #cache node libraries
 cache:
@@ -24,6 +28,8 @@ script:
   - npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
   #enable code coverage reports
   - ng test --no-watch --code-coverage --no-progress --browsers=ChromeHeadlessCI
+  #inspect code with the SonarQube Scanner
+  - sonar-scanner -Dsonar.projectKey=rubensa_reservas-client
   #build for GitHub Pages
   - ng build --base-href "https://rubensa.eu.org/reservas-client/"
 

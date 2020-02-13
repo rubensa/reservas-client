@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/rubensa/reservas-client.svg)](https://travis-ci.org/rubensa/reservas-client)
 [![codecov](https://codecov.io/gh/rubensa/reservas-client/branch/master/graph/badge.svg)](https://codecov.io/gh/rubensa/reservas-client)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rubensa_reservas-client&metric=alert_status)](https://sonarcloud.io/dashboard?id=rubensa_reservas-client)
 [![Website](https://img.shields.io/website?down_color=red&down_message=down&label=GitHub%20Pages&up_color=green&up_message=up&url=https%3A%2F%2Frubensa.eu.org%2Freservas-client%2Findex.html)](https://rubensa.github.io/reservas-client/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
