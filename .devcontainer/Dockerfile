@@ -1,4 +1,4 @@
-FROM rubensa/ubuntu-tini-dev
+FROM rubensa/ubuntu-tini-dev-chrome
 
 # Keep container running (for use in VSCode)
 CMD [ "tail", "-f", "/dev/null" ]
