@@ -1,0 +1,24 @@
+#we use node
+language: node_js
+
+#we add the node 12 environment
+node_js:
+  - lts/dubnium
+
+#we need google-chrome for testing
+addons:
+  chrome: stable
+
+#cache node libraries
+cache:
+  directories:
+     - ./node_modules
+
+#install project libraries
+install:
+  - npm install
+
+#run test
+script:
+  - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+  - npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js  

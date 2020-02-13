@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rubensa/reservas-client.svg)](https://travis-ci.org/rubensa/reservas-client)
+
 # Reservas
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
