@@ -21,9 +21,17 @@
     // History support
     "xyz.local-history",
     // Angular language service
-    "Angular.ng-template"
+    "Angular.ng-template",
+    // Chrome debugger
+    "msjsdiag.debugger-for-chrome"
   ],
   "settings": {
+    "remote.extensionKind": {
+      // Force chrome debugger extension installation on container
+      "msjsdiag.debugger-for-chrome": [
+        "workspace"
+      ]
+    },
     // Run interactive bash shell in VSCode integrated terminal
     "terminal.integrated.shellArgs.linux": [
       "-l"
@@ -90,6 +98,15 @@
     "type=bind,source=${localWorkspaceFolder}/.vscode-server/bin,target=/home/user/.vscode-server/bin",
     "--mount",
     "type=bind,source=${localWorkspaceFolder}/.vscode-server/extensions,target=/home/user/.vscode-server/extensions",
+    // X11 Unix-domain socket
+    "--mount",
+    "type=bind,source=/tmp/.X11-unix,target=/tmp/.X11-unix",
+    "--env=DISPLAY=unix${localEnv:DISPLAY}",
+    // Allow shared memory to avoid RAM access failures and rendering glitches due to X extesnion MIT-SHM
+    "--ipc=host",
+    // The kernel requires SYS_ADMIN for Chrome sand-box
+    "--cap-add",
+    "SYS_ADMIN",
     // $(id -u):$(id -g)
     "-u",
     "1000:1000",
