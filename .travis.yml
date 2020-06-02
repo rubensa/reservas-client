@@ -10,8 +10,6 @@ addons:
   chrome: stable
   sonarcloud:
     organization: "rubensa"
-    token:
-      secure: $SONAR_TOKEN
 
 #cache node libraries
 cache:
