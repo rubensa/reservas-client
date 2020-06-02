@@ -2,6 +2,7 @@
   "name": "reservas-client",
   "context": ".",
   "dockerFile": "Dockerfile",
+  "workspaceFolder": "/workspace",
   "appPort": [
     // Front-end development (Angular server)
     //"0.0.0.0:4200:4200"
@@ -111,7 +112,10 @@
     "-u",
     "1000:1000",
     // Timezone
-    "--env=TZ=Europe/Madrid"
+    "--env=TZ=Europe/Madrid",
+    // Mounts the project folder to '/workspace'.
+    "--mount",
+    "type=bind,source=${localWorkspaceFolder},target=/workspace"
   ],
   "overrideCommand": false
 }
